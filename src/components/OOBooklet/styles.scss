@@ -1,0 +1,244 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'play', sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 15px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+h4 {
+  font-size: 13px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+h6 {
+  font-size: 11px;
+}
+
+.booklet-content {
+}
+
+.scroller {
+  height: 550px;
+  overflow: auto;
+  overflow-x: hidden;
+  margin-left: -10px;
+}
+
+#booklet-closeicon {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 250px;
+  top: 5px;
+  //background-color: red;
+  background-image: url('../../static/images/close_icon_small.png');
+  cursor: pointer;
+}
+
+#booklet-left-part {
+  padding: 0px 0 15px 5px;
+  margin-top: -7px;
+}
+
+.photos {
+  margin: -10px 0 0 15px;
+  padding: 7px 0 0 0;
+  width: 264px;
+  height: 198px;
+  background-color: white;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  img {
+    width: 254px;
+    height: 188px;
+  }
+}
+
+#photo1 {
+  -webkit-transform: rotate(-11deg);
+  -moz-transform: rotate(-11deg);
+  -ms-transform: rotate(-11deg);
+  -o-transform: rotate(-11deg);
+  transform: rotate(-11deg);
+}
+
+#photo2 {
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  transform: rotate(5deg);
+
+}
+
+#photo3 {
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+}
+
+.booklet-info {
+  display: block;
+  margin: 0 2px 0 2px;
+  padding: 1px 3px 1px 3px;
+  background-color: #fffeb7;
+  border: solid 1px #afa76f;
+  border-radius: 5px;
+  font-size: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+}
+
+.booklet-title {
+  background-color: #E2C788;
+  font-weight: bold;
+  text-align: center;
+}
+
+.booklet-section {
+  text-align: center;
+}
+
+.charts {
+  margin: 5px;
+  padding: 5px;
+  width: 97%;
+  height: 300px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  img {
+    width: 125px;
+    height: 100px;
+  }
+}
+
+.charts-opinion {
+  margin: 5px;
+  padding: 5px;
+  width: 120px;
+  height: 80px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  float: left;
+  img {
+    width: 100px;
+    height: 70px;
+  }
+}
+
+.booklet-cover-img {
+  width: 100%;
+  height: 100px;
+  background-image: url("../../static/images/cmo_cover.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.booklet-cover-address {
+  margin-top: 180px;
+  font-size: 12px;
+}
+
+.booklet-cover h2 {
+  margin-top: 100px;
+}
+
+.director-photo {
+  height: 120px;
+}
+
+.director-name {
+  font-weight: bold;
+}
+
+.unit-photos-section {
+  img {
+    width: 140px;
+    height: 105px;
+    margin: 3px 0 0 0;
+    padding: 2px;
+  }
+}
+
+table {
+  margin: 0 auto;
+}
+
+#booklet-middle-part {
+  th {
+    margin: 2px;
+    border: solid 1px #ac9770;
+    background-color: #f7c759;
+    font-size: 14px;
+    text-align: center;
+    padding: 3px;
+    cursor: default;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+  }
+  td {
+    margin: 2px;
+    border: solid 1px #ac9770;
+    background-color: #fae0a7;
+    font-size: 14px;
+    text-align: center;
+    padding: 3px;
+    cursor: default;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+  }
+
+  td:hover {
+    border: solid 1px #ac9770;
+    background-color: #facc96;
+    -webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -o-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+  }
+}
+
+.booklet-table td {
+  width: auto;
+}
+
+.big-chart{
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  padding: 5px;
+  margin-left: -25%;
+  border-radius: 5px;
+  -webkit-box-shadow: 6px 10px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 6px 10px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 6px 10px 5px 0px rgba(0,0,0,0.5);
+  background-color: #facc96;
+  display: block;
+}

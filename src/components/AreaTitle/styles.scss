@@ -1,0 +1,27 @@
+.aohead {
+  width: 381px;
+  height: 115px;
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  //top: -95px;
+  z-index: 900;
+  cursor: pointer;
+  p {
+    margin-left: 290px;
+    margin-top: 53px;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'play', sans-serif;
+    font-weight: bold;
+    color: #2e0000;
+  }
+}
+
+.aohead-value{
+  background-image: url("../../static/images/aohead.png");
+}
+
+.aohead-short{
+  background-image: url("../../static/images/aohead_s.png");
+}

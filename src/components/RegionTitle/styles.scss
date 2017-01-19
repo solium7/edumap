@@ -1,0 +1,27 @@
+.region-title {
+  position: absolute;
+  top: 99px;
+  left: 40px;
+  background-color: #ebde83;
+  background: linear-gradient(to top, #ebde83, #e0b439);
+  width: 270px;
+  height: 60px;
+  border-radius: 7px;
+  border: solid 1px #817b50;
+  color: #531f22;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 60px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+  text-shadow: 1px 1px 1px #ffef99, 3px 3px 5px #ffffff;
+  z-index: 1800;
+  cursor: pointer;
+  img {
+    width: 40px;
+    height: 53px;
+    padding: 5px;
+    margin: 0;
+    margin-right: 25px;
+    float: left;
+  }
+}

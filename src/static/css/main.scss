@@ -1,0 +1,110 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Play:400,700&subset=latin,cyrillic);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #mapid{
+  height: 100%;
+  width: 100%;
+}
+
+#map-wrapper{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.panel {
+  display: block;
+  width: 255px;
+  padding: 5px;
+  margin: 5px;
+  position: absolute;
+  top: 150px;
+  left: 30px;
+  border: solid 2px gray;
+  border-radius: 10px;
+  background-color: antiquewhite;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+  font-family: 'play', sans-serif;
+  cursor: pointer;
+  z-index: 999;
+  img {
+    padding-top: 0;
+    height: 32px;
+    width: 27px;
+    margin-right: 10px;
+    float: left;
+  }
+}
+
+.info-block {
+  display: block;
+  margin: 0 2px 0 2px;
+  padding: 3px 3px 3px 3px;
+  background-color: #fffeb7;
+  border: solid 1px #afa76f;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+}
+
+.info-title {
+  background-color: #cfb67d;
+  font-weight: bold;
+}
+
+.veil {
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/pixel75.png);
+  position: fixed;
+  z-index: 9999;
+}
+
+.rates-btn {
+  display: block;
+  top: 11px;
+  background: #fcdd96;
+  border: solid 1px #D26F00;
+  width: 220px;
+  font-weight: bold;
+  float: left;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+  cursor: pointer;
+  margin: 0;
+  padding: 2px 0 0 0;
+  text-align: center;
+  font-family: 'play', sans-serif;
+  font-size: 12px;
+  line-height: 14px;
+  height: 50px;
+
+  left: 400px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1000;
+
+  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+
+  img {
+    margin-top: 2px;
+    margin-left: 5px;
+    width: 42px;
+    height: 42px;
+    float: left;
+  }
+}
