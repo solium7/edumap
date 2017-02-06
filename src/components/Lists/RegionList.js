@@ -3,7 +3,6 @@ import {REGION_ALIASES, REGIONS, REGION_BLAZONS} from '../../constants';
 import '../../static/css/main.scss';
 import './styles.scss';
 
-
 export default class RegionList extends Component {
     render() {
         return (

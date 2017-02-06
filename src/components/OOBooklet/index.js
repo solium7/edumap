@@ -9,20 +9,19 @@ import './styles.scss';
 export default class OOBooklet extends Component {
     constructor(props) {
         super(props);
-        console.log(typeof Highcharts);
-        this.generateRandomChart = this.generateRandomChart.bind(this);
+        console.warn(typeof Highcharts);
+        this.generateRatingChart = this.generateRatingChart.bind(this);
     }
 
     componentDidMount() {
         $('.big-chart').hide();
-        $('#chart-1').mouseenter( () => $('#big-chart-1').show() ).mouseleave( () => $('#big-chart-1').hide() );
-        $('#chart-2').mouseenter( () => $('#big-chart-2').show() ).mouseleave( () => $('#big-chart-2').hide() );
-        $('#chart-3').mouseenter( () => $('#big-chart-3').show() ).mouseleave( () => $('#big-chart-3').hide() );
-        $('#chart-4').mouseenter( () => $('#big-chart-4').show() ).mouseleave( () => $('#big-chart-4').hide() );
-        $('#chart-5').mouseenter( () => $('#big-chart-5').show() ).mouseleave( () => $('#big-chart-5').hide() );
-        $('#chart-6').mouseenter( () => $('#big-chart-6').show() ).mouseleave( () => $('#big-chart-6').hide() );
+        $('#chart-1').mouseenter(() => $('#big-chart-1').show()).mouseleave(() => $('#big-chart-1').hide());
+        $('#chart-2').mouseenter(() => $('#big-chart-2').show()).mouseleave(() => $('#big-chart-2').hide());
+        $('#chart-3').mouseenter(() => $('#big-chart-3').show()).mouseleave(() => $('#big-chart-3').hide());
+        $('#chart-4').mouseenter(() => $('#big-chart-4').show()).mouseleave(() => $('#big-chart-4').hide());
+        $('#chart-5').mouseenter(() => $('#big-chart-5').show()).mouseleave(() => $('#big-chart-5').hide());
+        $('#chart-6').mouseenter(() => $('#big-chart-6').show()).mouseleave(() => $('#big-chart-6').hide());
 
-        for (let i = 1; i < 7; i++) this.generateRandomChart('Опрос №' + i, 'chart-' + i);
         this.Booklet = (function () {
             var $container = $('#rm-container'),
                 $cover = $container.find('div.rm-cover'),
@@ -102,12 +101,14 @@ export default class OOBooklet extends Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log(prevProps + prevState);
-        // TODO Generate and place charts
+        const unit = this.props.ooUnit;
+        for (let i = 1; i < 7; i++) {
+            this.generateRatingChart(unit.ooRatings[i-1].title, unit.ooRatings[i-1].points, 'chart-' + i);
+        }
     }
 
-    generateRandomChart(chartTitle, containerId) {
-        const arrRand = [Number((Math.random() * 100).toFixed(2)), Number((Math.random() * 100).toFixed(2)), Number((Math.random() * 100).toFixed(2)), Number((Math.random() * 100).toFixed(2)), Number((Math.random() * 100).toFixed(2)), Number((Math.random() * 100).toFixed(2)), Number((Math.random() * 100).toFixed(2)), Number((Math.random() * 100).toFixed(2)), Number((Math.random() * 100).toFixed(2)), Number((Math.random() * 100).toFixed(2)), Number((Math.random() * 100).toFixed(2)), Number((Math.random() * 100).toFixed(2))];
+    generateRatingChart(chartTitle, chartData, containerId) {
+        // chartData - array of 10 numbers
         Highcharts.chart(containerId, {
             chart: {
                 type: 'bar'
@@ -129,10 +130,10 @@ export default class OOBooklet extends Component {
             },
             series: [{
                 name: chartTitle,
-                data: arrRand
+                data: chartData
             }]
         });
-        Highcharts.chart('big-'+containerId, {
+        Highcharts.chart('big-' + containerId, {
             chart: {
                 type: 'bar'
             },
@@ -153,7 +154,7 @@ export default class OOBooklet extends Component {
             },
             series: [{
                 name: chartTitle,
-                data: arrRand
+                data: chartData
             }]
         });
     }
@@ -161,47 +162,47 @@ export default class OOBooklet extends Component {
     render() {
         const unit = this.props.ooUnit;
         const programs = [];
-        if (unit.ooTech != '') {
+        if (unit.ooTech && unit.ooTech != '') {
             unit.ooTech.split('#').forEach(item => {
                 programs.push([item, OO_PROGRAM_TYPES.ooTech]);
             })
         }
-        if (unit.ooScience != '') {
+        if (unit.ooScience && unit.ooScience != '') {
             unit.ooScience.split('#').forEach(item => {
                 programs.push([item, OO_PROGRAM_TYPES.ooScience]);
             })
         }
-        if (unit.ooSport != '') {
+        if (unit.ooSport && unit.ooSport != '') {
             unit.ooSport.split('#').forEach(item => {
                 programs.push([item, OO_PROGRAM_TYPES.ooSport]);
             })
         }
-        if (unit.ooArt != '') {
+        if (unit.ooArt && unit.ooArt != '') {
             unit.ooArt.split('#').forEach(item => {
                 programs.push([item, OO_PROGRAM_TYPES.ooArt]);
             })
         }
-        if (unit.ooTourism != '') {
+        if (unit.ooTourism && unit.ooTourism != '') {
             unit.ooTourism.split('#').forEach(item => {
                 programs.push([item, OO_PROGRAM_TYPES.ooTourism]);
             })
         }
-        if (unit.ooPatriot != '') {
+        if (unit.ooPatriot && unit.ooPatriot != '') {
             unit.ooPatriot.split('#').forEach(item => {
                 programs.push([item, OO_PROGRAM_TYPES.ooPatriot]);
             })
         }
-        if (unit.ooSocial != '') {
+        if (unit.ooSocial && unit.ooSocial != '') {
             unit.ooSocial.split('#').forEach(item => {
                 programs.push([item, OO_PROGRAM_TYPES.ooSocial]);
             })
         }
-        if (unit.ooCulture != '') {
+        if (unit.ooCulture && unit.ooCulture != '') {
             unit.ooCulture.split('#').forEach(item => {
                 programs.push([item, OO_PROGRAM_TYPES.ooCulture]);
             })
         }
-        if (unit.ooOther != '') {
+        if (unit.ooOther && unit.ooOther != '') {
             unit.ooOther.split('#').forEach(item => {
                 programs.push([item, OO_PROGRAM_TYPES.ooOther]);
             })
@@ -307,7 +308,9 @@ export default class OOBooklet extends Component {
                                                 ))}
                                             </table>
                                         </div>
-                                        <div className='booklet-info booklet-title'>Модифицированные дополнительные общеобразовательные программы</div>
+                                        <div className='booklet-info booklet-title'>Модифицированные дополнительные
+                                            общеобразовательные программы
+                                        </div>
                                         <div className='booklet-info'><br/><br/><br/><br/><br/></div>
                                     </div>
                                 </div>

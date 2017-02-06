@@ -47,7 +47,7 @@ export default class FullMap extends Component {
     highlightRegion(name) {
         const pos = REGION_ALIASES.indexOf(name);
         if (name == 'go') {
-            console.log('go');
+            console.warn('go');
         } else {
             mapAO.AORegionPolygons.forEach(function (item, idx) {
                 if (idx != pos) {

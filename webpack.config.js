@@ -1,17 +1,23 @@
 var webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 var path = require('path');
 
 module.exports = {
-    entry: './src/index',
+    entry: {
+        index: ['babel-polyfill', './src/index'],
+        // import_page: ['./src/importXLSX/import']
+    },
+    target: 'web',
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'bundle.js',
-        publicPath: '/'
+        // path: __dirname + '/dist',
+        publicPath: '/',
+        filename: '[name].js'
     },
     resolve: {
         extensions: ['', '.js']
     },
-    devtool: 'source-map',
+    // devtool: 'source-map',
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.DefinePlugin({
@@ -23,7 +29,11 @@ module.exports = {
             compress: {
                 warnings: false
             }
-        })
+        }),
+        new CopyWebpackPlugin([
+            {from: './src/import', to: 'import'},
+            {from: './src/index.html', to: 'index.html'}
+        ])
     ],
     module: {
         loaders: [
@@ -61,10 +71,10 @@ module.exports = {
             }, {
                 test: /\.geojson$/,
                 loader: 'json'
-            },{
+            }, {
                 test: /\.scss$/,
                 loader: 'style!css?localIdentName=[path][name]--[local]!postcss-loader!sass',
-            },{
+            }, {
                 test: /\.css$/,
                 loader: "style-loader!css-loader"
             }

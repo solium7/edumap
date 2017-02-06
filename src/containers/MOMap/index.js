@@ -189,10 +189,10 @@ export default class MOMap extends Component {
             if (Number(a.rateValue) < Number(b.rateValue)) return 1;
         });
         this.setState({isRated: true});
-        console.log(sumVal);
-        console.log(typeof this.moUnits.length);
-        console.log(this.moUnits.length);
-        console.log((sumVal / this.moUnits.length).toFixed(2));
+        // console.log(sumVal);
+        // console.log(typeof this.moUnits.length);
+        // console.log(this.moUnits.length);
+        // console.log((sumVal / this.moUnits.length).toFixed(2));
         this.averageRateValue = (sumVal / this.moUnits.length).toFixed(2);
     }
 

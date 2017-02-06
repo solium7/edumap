@@ -28,23 +28,24 @@ import ooIcon3 from './static/images/icons/additional3_s.png';
 import ooIcon4 from './static/images/icons/additional4_s.png';
 import ooIcon5 from './static/images/icons/additional5_s.png';
 
-import asGeoJSON from './static/jsons/geodata/as.geojson'
-import ahGeoJSON from './static/jsons/geodata/ah.geojson'
-import chGeoJSON from './static/jsons/geodata/ch.geojson'
-import enGeoJSON from './static/jsons/geodata/en.geojson'
-import haGeoJSON from './static/jsons/geodata/ha.geojson'
-import ikGeoJSON from './static/jsons/geodata/ik.geojson'
-import kaGeoJSON from './static/jsons/geodata/ka.geojson'
-import krGeoJSON from './static/jsons/geodata/kr.geojson'
-import liGeoJSON from './static/jsons/geodata/li.geojson'
-import naGeoJSON from './static/jsons/geodata/na.geojson'
-import prGeoJSON from './static/jsons/geodata/pr.geojson'
-import voGeoJSON from './static/jsons/geodata/vo.geojson'
-import znGeoJSON from './static/jsons/geodata/zn.geojson'
-import squareGeoJSON from './static/jsons/geodata/blacksquare.geojson'
+import asGeoJSON from './static/jsons/geodata/as.geojson';
+import ahGeoJSON from './static/jsons/geodata/ah.geojson';
+import chGeoJSON from './static/jsons/geodata/ch.geojson';
+import enGeoJSON from './static/jsons/geodata/en.geojson';
+import haGeoJSON from './static/jsons/geodata/ha.geojson';
+import ikGeoJSON from './static/jsons/geodata/ik.geojson';
+import kaGeoJSON from './static/jsons/geodata/ka.geojson';
+import krGeoJSON from './static/jsons/geodata/kr.geojson';
+import liGeoJSON from './static/jsons/geodata/li.geojson';
+import naGeoJSON from './static/jsons/geodata/na.geojson';
+import prGeoJSON from './static/jsons/geodata/pr.geojson';
+import voGeoJSON from './static/jsons/geodata/vo.geojson';
+import znGeoJSON from './static/jsons/geodata/zn.geojson';
+import squareGeoJSON from './static/jsons/geodata/blacksquare.geojson';
 
-import moInfoJSON from './static/jsons/mo_info.json'
-import dopUnits from './static/jsons/dopUnits.json'
+import moInfoJSON from './static/jsons/mo_info.json';
+import dopUnits from './static/jsons/dopUnits.json';
+// import ooUnits from './static/jsons/units.json';
 
 export const REGION_GEOJSONS = [asGeoJSON, znGeoJSON, ahGeoJSON, voGeoJSON, enGeoJSON, ikGeoJSON, kaGeoJSON, krGeoJSON, liGeoJSON, naGeoJSON, prGeoJSON, haGeoJSON, chGeoJSON];
 export const BLACK_SQUARE_JSON = squareGeoJSON;
@@ -321,3 +322,93 @@ export const OO_PROGRAM_TYPES = {
 };
 
 export const RATE_BALLS = [null, RateBall5, RateBall4, RateBall3, RateBall2, RateBall1];
+
+export const XLSMarkUp = {
+    sheet1: { // additional units
+        moCode: 'B',
+        ooCode: 'C',
+        ooType: 'D',
+        ooName: 'E',
+        ooFullName: 'F',
+        ooBoss: 'G',
+        ooAddress: 'H',
+        ooPhone: 'J',
+        ooMail: 'K',
+        ooSite: 'N',
+        ooFoundationYear: 'O',
+        ooTech: 'P',
+        ooScience: 'Q',
+        ooSport: 'R',
+        ooArt: 'S',
+        ooTourism: 'T',
+        ooPatriot: 'U',
+        ooSocial: 'V',
+        ooOther: 'W',
+        ooCulture: 'X',
+        ooModPrograms: 'AD',
+        ooRatings: [
+            {
+                title: "Оценка степени открытости и доступности информации об организации по баллам (%)",
+                points: ["AE", "AF", "AG", "AH", "AI", "AJ", "AK", "AL", "AM", "AN", "AO"]
+            },
+            {
+                title: "Оценка организации условий для обучения детей с ОВЗ и инвалидов (%)",
+                points: ["AP", "AQ", "AR", "AS", "AT", "AU", "AV", "AW", "AX", "AY", "AZ"]
+            },
+            {
+                title: "Оценка компетентности работников организации (%)",
+                points: ["BA", "BB", "BC", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BK"]
+            },
+            {
+                title: "Оценка материально-технического обеспечения организации (%)",
+                points: ["BL", "BM", "BN", "BO", "BP", "BQ", "BR", "BS", "BT", "BU", "BV"]
+            },
+            {
+                title: "Оценка качества предоставляемых образовательных услуг (%)",
+                points: ["BW", "BX", "BY", "BZ", "CA", "CB", "CC", "CD", "CE", "CF", "CG"]
+            },
+            {
+                title: "Оценка возможности развития творческих способностей и интересов обучающихся (%)",
+                points: ["CH", "CI", "CJ", "CK", "CL", "CM", "CN", "CO", "CP", "CQ", "CR"]
+            }]
+    },
+    sheet0: { // all units
+        "ooMOCode": "A",
+        "ooCode": "B",
+        "ooType": "C",
+        "ooName": "D",
+        "ooFullName": "E",
+        "ooDirector": "F",
+        "ooAddress": "G",
+        "ooResrvdString1": "H",
+        "ooPhone": "I",
+        "ooEMail": "J",
+        "ooResrvdString2": "K",
+        "ooWWW": "L",
+        "ooYearOfFndtn": "M",
+        "ooHistory": "N",
+        "ooKurs1Count": "P",
+        "ooKurs2Count": "R",
+        "ooKurs3Count": "T",
+        "ooKurs4Count": "V",
+        "ooKurs5Count": "X",
+        "ooWorkersCount": "Y",
+        "ooCEOCount": "Z",
+        "ooEducatorsCount": "AA",
+        "ooResrvdString3": "AB",
+        "ooTeachersCount": "AC",
+        "ooTechMasters": "AD",
+        "ooEducatorsHelpers": "AE",
+        "ooServantsCount": "AF",
+        "ooForeignTeachers": "AG",
+        "ooArea": "AH",
+        "ooResrvdString4": "AI",
+        "ooMainBiuldings": "AJ",
+        "ooDormitories": "AK",
+        "ooOtherBiuldings": "AL",
+        "ooLandArea": "AM",
+        "ooLaboratoriesVacancy": "AN",
+        "ooTechAreaVacancy": "AO",
+        "ooResrvdString5": "AP"
+    }
+};
